@@ -1,0 +1,62 @@
+<!--<div>-->
+  <!--&lt;!&ndash;<div>&ndash;&gt;-->
+    <!--&lt;!&ndash;heroDetail：&ndash;&gt;-->
+    <!--&lt;!&ndash;<span>id:{{ hero.id }} name:{{ hero.name }}</span>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div>&ndash;&gt;-->
+    <!--&lt;!&ndash;name 格式化：&ndash;&gt;-->
+    <!--&lt;!&ndash;<span>{{ hero.name | uppercase }}</span>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<label>&ndash;&gt;-->
+    <!--&lt;!&ndash;heroName 双向绑定：&ndash;&gt;-->
+    <!--&lt;!&ndash;<input [(ngModel)]="hero.name" placeholder="name">&ndash;&gt;-->
+  <!--&lt;!&ndash;</label>&ndash;&gt;-->
+  <!--&lt;!&ndash;<label>&ndash;&gt;-->
+    <!--&lt;!&ndash;heroName 单向绑定：&ndash;&gt;-->
+    <!--&lt;!&ndash;<input [ngModel]="hero.name" placeholder="name">&ndash;&gt;-->
+  <!--&lt;!&ndash;</label>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<div>-->
+  <!--展示列表：-->
+  <!--<ul class="heroesList">-->
+    <!--<li *ngFor="let heroItem of heroList" (click)="onSelectWithHero(heroItem)">-->
+      <!--<span class="badge">id = {{ heroItem.id }}</span>-->
+      <!--name={{ heroItem.name }}-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<div *ngIf="selectedHero">-->
+    <!--<label>-->
+      <!--列表点击：-->
+      <!--<input [(ngModel)]="selectedHero.name" placeholder="name">-->
+    <!--</label>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div>-->
+  <!--展示列表(添加选中样式)：-->
+  <!--<ul class="heroesList">-->
+    <!--<li *ngFor="let heroItem of heroes" [class.selected]="heroItem == selectedHero" (click)="onSelectWithHero(heroItem)">-->
+      <!--<span class="badge">id = {{ heroItem.id }}</span>-->
+      <!--name={{ heroItem.name }}-->
+    <!--</li>-->
+  <!--</ul>-->
+
+<!--</div>-->
+
+<div>
+  展示detail 路由：
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes" >
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+ <!--选择框： https://silviomoreto.github.io/bootstrap-select/examples/-->
