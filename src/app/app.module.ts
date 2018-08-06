@@ -13,6 +13,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HideShowComponent } from './hide-show/hide-show.component';
+import { LodingAnimComponent } from './loding-anim/loding-anim.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import {HttpClientModule} from '@angular/common/http';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    LoginComponent,
+    HeroSearchComponent,
+    HideShowComponent,
+    LodingAnimComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,7 @@ import {HttpClientModule} from '@angular/common/http';
     // 配置
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService,{ dataEncapsulation: false}
+      InMemoryDataService, { dataEncapsulation: false}
     )
   ],
   providers: [

@@ -1,7 +1,7 @@
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 
 // 替代 mockHeroes
-export class InMemoryDataService implements InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
       {id: 1, name: '哈哈哈1'},

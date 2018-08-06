@@ -20,5 +20,4 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHero()
       .subscribe(hero => this.heroes = hero.slice(1, 5)); // 2-5
   }
-
 }
